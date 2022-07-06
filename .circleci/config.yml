@@ -40,4 +40,4 @@ workflows:
             - print_hello
   test-env-vars-workflow:
     jobs:
-      - test-env-var
+      - test-env-vars
