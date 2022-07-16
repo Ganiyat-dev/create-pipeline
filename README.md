@@ -12,3 +12,8 @@
 - In this job, add a attach_workspace block (much like attaching a hard drive).
 - In this job, also run a bash command that prints the contents of output.txt. For example: cat output.txt.
 
+## Create a job that uses a reusable "command" that prints the pipelineId to the console.
+- 
+
+
+
