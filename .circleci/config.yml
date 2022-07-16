@@ -34,9 +34,9 @@ jobs:
     steps:
       - run: exit 1
       - run:
-        name: on error
-        command: echo "Hello you Error!"
-        when: on_fail
+          name: on error
+          command: echo "Hello you Error!"
+          when: on_fail
 workflows:
   build_fail_workflow:
     jobs:
