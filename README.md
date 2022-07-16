@@ -13,7 +13,7 @@
 - In this job, also run a bash command that prints the contents of output.txt. For example: cat output.txt.
 
 ## Create a job that uses a reusable "command" that prints the pipelineId to the console.
-- 
+- using a pipeline variable instead of environment variabes
 
 
 
