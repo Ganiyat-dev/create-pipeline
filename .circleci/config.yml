@@ -1,19 +1,16 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
 version: 2.1
 
-# Define a job to be invoked later in a workflow.
 jobs:
   save_hello_world_output:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     docker:
       - image: circleci/node:13.8.0
-    # Add steps to the job
     steps:
-      - run: echo "text to output here" > output.txt
+      - run: echo "hello world" > ~/output.txt
       - persist_to_workspace:
           root: ~/
           paths:
             - output.txt
+
   print_output_file:
     docker:
       - image: circleci/node:13.8.0
@@ -21,18 +18,7 @@ jobs:
       - attach_workspace:
           at: ~/
       - run: cat ~/output.txt
-        
-  
-  # test_env_vars:
-  #   docker:
-  #     - image: cimg/base:2020.01
-  #   steps:
-  #     - run:
-  #         name: "echo an env var that is part of the project"
-  #         command: |
-  #           echo $MY_ENV_VAR
 
-# Invoke jobs via workflows
 workflows:
   my_workflow:
     jobs:
@@ -40,6 +26,3 @@ workflows:
       - print_output_file:
           requires:
             - save_hello_world_output
-  # test-env-vars-workflow:
-  #   jobs:
-  #     - test_env_vars
