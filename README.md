@@ -13,7 +13,8 @@
 - In this job, also run a bash command that prints the contents of output.txt. For example: cat output.txt.
 
 ## Create a job that uses a reusable "command" that prints the pipelineId to the console.
-- using a pipeline variable instead of environment variabes
+- config02.yml contained a simple workflow that uses a pipeline variable instead of environment variabes
 
-
+## Create a job that has an intentional failure in it with a step that runs on fail that prints "Hello Error!" to the console.
+- config03.yml contains a job with step that fails on purpose by exiting with a non-zero code, and also a step that handles the error i.e when: on_fail
 
